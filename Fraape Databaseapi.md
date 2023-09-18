@@ -59,10 +59,38 @@ Out[8]:
  ('manugill694@gmail.com', 'manugill694@gmail.com'),
  ('Administrator', 'admin@example.com'))
 
+In [9]: users = frappe.db.get_values("User", filters={}, fieldname=["name", "email"], as_dict=True)
 
-
+In [10]: users
+Out[10]: 
+[{'name': 'baljeet@gmail.com', 'email': 'baljeet@gmail.com'},
+ {'name': 'ram@gmail.com', 'email': 'ram@gmail.com'},
+ {'name': 'manu@gmail.com', 'email': 'manu@gmail.com'},
+ {'name': 'inder@gmail.com', 'email': 'inder@gmail.com'},
+ {'name': 'preet@gmail.com', 'email': 'preet@gmail.com'},
+ {'name': 'Guest', 'email': 'guest@example.com'},
+ {'name': 'manugill694@gmail.com', 'email': 'manugill694@gmail.com'},
+ {'name': 'Administrator', 'email': 'admin@example.com'}]
 
 ```
+## Ordering
+
+```sh
+In [11]:  users = frappe.db.get_values("User", filters={}, fieldname=["name", "email"], as_dict=True, order_by='creation')
+
+In [12]: users
+Out[12]: 
+[{'name': 'baljeet@gmail.com', 'email': 'baljeet@gmail.com'},
+ {'name': 'ram@gmail.com', 'email': 'ram@gmail.com'},
+ {'name': 'inder@gmail.com', 'email': 'inder@gmail.com'},
+ {'name': 'manu@gmail.com', 'email': 'manu@gmail.com'},
+ {'name': 'preet@gmail.com', 'email': 'preet@gmail.com'},
+ {'name': 'manugill694@gmail.com', 'email': 'manugill694@gmail.com'},
+ {'name': 'Guest', 'email': 'guest@example.com'},
+ {'name': 'Administrator', 'email': 'admin@example.com'}]
+
+```
+
 
 
 
