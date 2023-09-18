@@ -31,6 +31,7 @@ Out[4]: 2
 
 ```
 ## get_values()
+
 ```sh
 In [5]: users = frappe.db.get_values("User", filters={})
 
@@ -44,8 +45,6 @@ Out[6]:
  ('Guest',),
  ('manugill694@gmail.com',),
  ('Administrator',))
-
-
 ```
 
 
