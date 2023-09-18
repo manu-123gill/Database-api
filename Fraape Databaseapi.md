@@ -8,11 +8,11 @@ frappe, library_mang, frappe_whatsapp, movie_tickets
 
 In [1]:  import frappe
 
-### Let’s get a count of User in the database.
+``sh
+# Let’s get a count of User in the database.
 
  In [2]: frappe.db.count('User')
 Out[2]: 7
 
 
 
-```sh
