@@ -45,6 +45,23 @@ Out[6]:
  ('Guest',),
  ('manugill694@gmail.com',),
  ('Administrator',))
+
+In [7]: users = frappe.db.get_values("User", filters={}, fieldname=["name", "email"])
+
+In [8]: users
+Out[8]: 
+(('baljeet@gmail.com', 'baljeet@gmail.com'),
+ ('ram@gmail.com', 'ram@gmail.com'),
+ ('manu@gmail.com', 'manu@gmail.com'),
+ ('inder@gmail.com', 'inder@gmail.com'),
+ ('preet@gmail.com', 'preet@gmail.com'),
+ ('Guest', 'guest@example.com'),
+ ('manugill694@gmail.com', 'manugill694@gmail.com'),
+ ('Administrator', 'admin@example.com'))
+
+
+
+
 ```
 
 
