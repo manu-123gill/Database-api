@@ -10,10 +10,5 @@ In [1]:  import frappe
 
 ```sh
 
-## Let’s get a count of User in the database.
-
- In [2]: frappe.db.count('User')
-Out[2]: 7
-
 
 
